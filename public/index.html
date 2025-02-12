@@ -1,0 +1,71 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoreo de Proyectos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Barra Superior -->
+  <header>
+    <h1>Monitoreo de Proyectos</h1>
+    <div class="auth">
+      <button id="logoutBtn">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main>
+    <!-- Sección de Tareas -->
+    <section class="tasks-calendar">
+      <table>
+        <thead>
+          <tr>
+            <th>Tarea</th>
+            <th>Categoría</th>
+            <th>Progreso</th>
+            <th>Inicio</th>
+            <th>Días</th>
+            <th>Fin</th>
+          </tr>
+        </thead>
+        <tbody id="taskTableBody">
+          <!-- Datos dinámicos -->
+        </tbody>
+      </table>
+
+      <!-- Calendario -->
+      <div class="calendar">
+        <h2>Calendario</h2>
+        <p>No hay eventos programados.</p>
+      </div>
+    </section>
+
+    <!-- Sección de Gráficos -->
+    <section class="charts">
+      <div class="chart-container">
+        <canvas id="curveSChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="performanceChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="budgetVsExpenseChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="percentageChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
